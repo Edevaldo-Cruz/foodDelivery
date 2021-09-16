@@ -6,30 +6,40 @@ import {
   TouchableOpacity,
   StyleSheet,
 } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+
+import SingInBtn from "../../component/SingInBtn";
+import BackBtn from "../../component/BackBtn";
 
 export default function SignUp() {
+  const navigation = useNavigation();
   return (
-    <View style={styles.container}>
-      <View style={styles.containerText}>
-        <Text style={styles.title}>Cadastro</Text>
+    <>
+      <BackBtn onClick={() => navigation.navigate("SignIn_Up")} />
+      <View style={styles.container}>
+        <View style={styles.containerText}>
+          <Text style={styles.title}>Cadastro</Text>
+        </View>
+        <View>
+          <TextInput style={styles.input} placeholder="Nome Do Usuario" />
+          <TextInput
+            secureTextEntry={true}
+            style={styles.input}
+            placeholder="Senha"
+          />
+          <TextInput
+            secureTextEntry={true}
+            style={styles.input}
+            placeholder="Repita sua senha"
+          />
+          <SingInBtn onClick={() => navigation.navigate("Home")} />
+
+          <TouchableOpacity>
+            <Text style={styles.text}>Esqueceu sua senha?</Text>
+          </TouchableOpacity>
+        </View>
       </View>
-      <View>
-        <TextInput style={styles.input} placeholder="Nome Do Usuario" />
-        <TextInput style={styles.input} placeholder="Senha" />
-        <TextInput style={styles.input} placeholder="Repita sua senha" />
-        <TouchableOpacity
-          style={styles.entrarbtn}
-          onPress={() => navigation.navigate("SignIn")}
-        >
-          <Text>Entrar</Text>
-        </TouchableOpacity>
-      </View>
-      <View>
-        <TouchableOpacity>
-          <Text>Esqueceu sua senha?</Text>
-        </TouchableOpacity>
-      </View>
-    </View>
+    </>
   );
 }
 
@@ -50,14 +60,6 @@ const styles = StyleSheet.create({
     color: "#000",
     marginBottom: 30,
   },
-  entrarbtn: {
-    backgroundColor: "#D35",
-    width: 354,
-    height: 50,
-    borderRadius: 30,
-    justifyContent: "center",
-    marginBottom: 20,
-  },
   input: {
     backgroundColor: "#CCC",
     width: 354,
@@ -66,5 +68,8 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     marginBottom: 20,
     paddingLeft: 25,
+  },
+  text: {
+    alignSelf: "flex-end",
   },
 });

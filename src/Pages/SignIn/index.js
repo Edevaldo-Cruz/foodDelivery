@@ -9,24 +9,33 @@ import {
 import { useNavigation } from "@react-navigation/native";
 
 import SingInBtn from "../../component/SingInBtn";
+import BackBtn from "../../component/BackBtn";
 
 export default function SignIn() {
   const navigation = useNavigation();
   return (
-    <View style={styles.container}>
-      <View style={styles.containerText}>
-        <Text style={styles.title}>Login</Text>
-      </View>
-      <View>
-        <TextInput style={styles.input} placeholder="Nome Do Usuario" />
-        <TextInput style={styles.input} placeholder="Senha" />
-        <SingInBtn onClick={() => navigation.navigate("Home")} />
+    <>
+      <BackBtn onClick={() => navigation.navigate("SignIn_Up")} />
 
-        <TouchableOpacity>
-          <Text style={styles.text}>Esqueceu sua senha?</Text>
-        </TouchableOpacity>
+      <View style={styles.container}>
+        <View style={styles.containerText}>
+          <Text style={styles.title}>Login</Text>
+        </View>
+        <View>
+          <TextInput style={styles.input} placeholder="Nome Do Usuario" />
+          <TextInput
+            secureTextEntry={true}
+            style={styles.input}
+            placeholder="Senha"
+          />
+          <SingInBtn onClick={() => navigation.navigate("Home")} />
+
+          <TouchableOpacity>
+            <Text style={styles.text}>Esqueceu sua senha?</Text>
+          </TouchableOpacity>
+        </View>
       </View>
-    </View>
+    </>
   );
 }
 
@@ -36,8 +45,10 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+
   containerText: {
     alignSelf: "flex-start",
+
     paddingLeft: 30,
   },
   title: {

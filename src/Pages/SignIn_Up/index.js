@@ -15,7 +15,7 @@ export default function SignIn_Up() {
       <SingInBtn onClick={() => navigation.navigate("SignIn")} />
       <TouchableOpacity
         style={styles.inscreverbtn}
-        onClick={() => navigation.navigate("SignUp")}
+        onPress={() => navigation.navigate("SignUp")}
       >
         <Text style={styles.inscrever}>inscrever-se</Text>
       </TouchableOpacity>
@@ -33,21 +33,6 @@ const styles = StyleSheet.create({
     width: 300,
     height: 300,
     marginBottom: 60,
-  },
-  entrarbtn: {
-    backgroundColor: "#D35",
-    width: 354,
-    height: 50,
-    borderRadius: 30,
-    justifyContent: "center",
-    marginBottom: 20,
-  },
-  entrar: {
-    fontFamily: "Bangers_400Regular",
-    fontStyle: "italic",
-    fontSize: 18,
-    color: "#FFF",
-    textAlign: "center",
   },
   inscreverbtn: {
     backgroundColor: "#CCC",
