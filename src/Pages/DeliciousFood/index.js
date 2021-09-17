@@ -19,7 +19,7 @@ const slides = [
     key: "2",
     image: require("../../assets/Fast.png"),
     title: "Entrega Super Rápida!!",
-    text: "Entregamos o mais rápido possí vel no conforto do seu lar.",
+    text: "Entregamos o mais rápido possível no conforto do seu lar.",
   },
   {
     key: "3",
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal: "2%",
-    backgroundColor: "#D35",
+    backgroundColor: "#D35400",
   },
   activeDot: {
     backgroundColor: "#FFF",

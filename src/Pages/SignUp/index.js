@@ -10,6 +10,7 @@ import { useNavigation } from "@react-navigation/native";
 
 import SingInBtn from "../../component/SingInBtn";
 import BackBtn from "../../component/BackBtn";
+import Footer from "../../component/Footer";
 
 export default function SignUp() {
   const navigation = useNavigation();
@@ -32,13 +33,16 @@ export default function SignUp() {
             style={styles.input}
             placeholder="Repita sua senha"
           />
-          <SingInBtn onClick={() => navigation.navigate("Home")} />
+          <SingInBtn onClick={() => navigation.navigate("Home")}>
+            <Text>Entrar</Text>
+          </SingInBtn>
 
           <TouchableOpacity>
             <Text style={styles.text}>Esqueceu sua senha?</Text>
           </TouchableOpacity>
         </View>
       </View>
+      <Footer />
     </>
   );
 }

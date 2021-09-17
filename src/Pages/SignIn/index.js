@@ -10,6 +10,7 @@ import { useNavigation } from "@react-navigation/native";
 
 import SingInBtn from "../../component/SingInBtn";
 import BackBtn from "../../component/BackBtn";
+import Footer from "../../component/Footer";
 
 export default function SignIn() {
   const navigation = useNavigation();
@@ -28,13 +29,16 @@ export default function SignIn() {
             style={styles.input}
             placeholder="Senha"
           />
-          <SingInBtn onClick={() => navigation.navigate("Home")} />
+          <SingInBtn onClick={() => navigation.navigate("Home")}>
+            <Text>Entrar</Text>
+          </SingInBtn>
 
           <TouchableOpacity>
             <Text style={styles.text}>Esqueceu sua senha?</Text>
           </TouchableOpacity>
         </View>
       </View>
+      <Footer />
     </>
   );
 }
@@ -57,13 +61,6 @@ const styles = StyleSheet.create({
     fontSize: 24,
     color: "#000",
     marginBottom: 30,
-  },
-  entrarbtn: {
-    backgroundColor: "#D35",
-    width: 354,
-    height: 50,
-    borderRadius: 30,
-    marginBottom: 15,
   },
   entrar: {
     textAlign: "center",
