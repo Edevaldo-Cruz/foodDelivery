@@ -10,6 +10,7 @@ import { useNavigation } from "@react-navigation/native";
 
 import SingInBtn from "../../component/SingInBtn";
 import BackBtn from "../../component/BackBtn";
+import InputPassword from "../../component/InputPassword";
 import Footer from "../../component/Footer";
 
 export default function SignUp() {
@@ -23,16 +24,8 @@ export default function SignUp() {
         </View>
         <View>
           <TextInput style={styles.input} placeholder="Nome Do Usuario" />
-          <TextInput
-            secureTextEntry={true}
-            style={styles.input}
-            placeholder="Senha"
-          />
-          <TextInput
-            secureTextEntry={true}
-            style={styles.input}
-            placeholder="Repita sua senha"
-          />
+          <InputPassword placeholder="Senha" />
+          <InputPassword placeholder="Repita sua senha" />
           <SingInBtn onClick={() => navigation.navigate("Home")}>
             <Text>Entrar</Text>
           </SingInBtn>
