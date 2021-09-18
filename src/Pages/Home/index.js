@@ -6,11 +6,11 @@ import {
   Text,
   ScrollView,
   TouchableOpacity,
-  Image,
 } from "react-native";
 import { AntDesign, Entypo } from "@expo/vector-icons";
 
 import Menu from "../../component/Menu";
+import ItensMenu from "../../component/ItensMenu";
 
 export default function Home() {
   return (
@@ -81,15 +81,35 @@ export default function Home() {
           </TouchableOpacity>
         </View>
       </View>
-      <View style={styles.containerFood}>
-        <View style={styles.menuBtn}>
-          <Text style={styles.text}>Burgues</Text>
-          <Image
-            style={styles.image}
-            source={require("../../assets/card1.png")}
-          />
+
+      <ScrollView horizontal style={styles.containerList}>
+        <View>
+          <ItensMenu
+            image={require("../../assets/card1.png")}
+            color={"#3498DB"}
+          >
+            <Text>Burgues</Text>
+          </ItensMenu>
         </View>
-      </View>
+
+        <ItensMenu image={require("../../assets/card2.png")} color={"#9B59B6"}>
+          <Text>Pizza</Text>
+        </ItensMenu>
+        <ItensMenu image={require("../../assets/card3.png")} color={"#3498DB"}>
+          <Text>BBQ</Text>
+        </ItensMenu>
+      </ScrollView>
+      <ScrollView horizontal style={styles.containerList}>
+        <ItensMenu image={require("../../assets/card4.png")} color={"#9B59B6"}>
+          <Text>Burgues</Text>
+        </ItensMenu>
+        <ItensMenu image={require("../../assets/card5.png")} color={"#3498DB"}>
+          <Text>Pizza</Text>
+        </ItensMenu>
+        <ItensMenu image={require("../../assets/card6.png")} color={"#9B59B6"}>
+          <Text>BBQ</Text>
+        </ItensMenu>
+      </ScrollView>
     </ScrollView>
   );
 }
@@ -102,7 +122,6 @@ const styles = StyleSheet.create({
   AntDesign: {
     padding: 20,
   },
-
   input: {
     flexDirection: "row",
     alignItems: "center",
@@ -123,23 +142,9 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "row",
   },
-  containerFood: {
+  containerList: {
     flex: 1,
-    paddingHorizontal: 30,
+    flexDirection: "row",
     paddingVertical: "2%",
-  },
-  menuBtn: {
-    backgroundColor: "#3498DB",
-    width: 130,
-    height: 130,
-    borderRadius: 30,
-  },
-  txt: {},
-  image: {
-    width: 130,
-    height: 130,
-
-    left: 10,
-    borderRadius: 20,
   },
 });
