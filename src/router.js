@@ -19,26 +19,31 @@ function Routes() {
           name="DeliciousFood"
           component={DeliciousFood}
           options={{ headerShown: false }}
+          TabBar={false}
         />
         <Stack.Screen
           name="SignIn_Up"
           component={SignIn_Up}
           options={{ headerShown: false }}
+          TabBar={false}
         />
         <Stack.Screen
           name="SignIn"
           component={SignIn}
           options={{ headerShown: false }}
+          TabBar={false}
         />
         <Stack.Screen
           name="SignUp"
           component={SignUp}
           options={{ headerShown: false }}
+          TabBar={false}
         />
         <Stack.Screen
           name="Home"
           component={Home}
           options={{ headerShown: false }}
+          TabBar={true}
         />
       </Stack.Navigator>
     </NavigationContainer>

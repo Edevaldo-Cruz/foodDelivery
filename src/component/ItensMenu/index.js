@@ -20,11 +20,15 @@ export default function ItensMenu(props) {
 
 const styles = StyleSheet.create({
   containerFood: {
-    marginHorizontal: 30,
+    marginLeft: 30,
+    marginTop: 15,
+    width: 130,
+    height: 130,
   },
   containerText: {
-    width: 180,
-    height: 180,
+    width: 120,
+    height: 120,
+    borderRadius: 30,
   },
   menuBtn: {},
   text: {
@@ -34,7 +38,9 @@ const styles = StyleSheet.create({
     top: 8,
   },
   image: {
+    width: 100,
+    height: 100,
+    left: 30,
     borderRadius: 20,
-    top: 8,
   },
 });
