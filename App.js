@@ -6,6 +6,7 @@ import { useFonts, Bangers_400Regular } from "@expo-google-fonts/bangers";
 import { Roboto_400Regular } from "@expo-google-fonts/roboto";
 
 import Routes from "./src/router";
+import { NavigationContainer } from "@react-navigation/native";
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -18,7 +19,9 @@ export default function App() {
   return (
     <>
       <StatusBar style="auto" />
-      <Routes />
+      <NavigationContainer>
+        <Routes />
+      </NavigationContainer>
     </>
   );
 }
