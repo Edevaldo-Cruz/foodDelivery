@@ -1,7 +1,12 @@
 import React from "react";
-
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import {
+  FontAwesome5,
+  MaterialCommunityIcons,
+  Ionicons,
+  FontAwesome,
+} from "@expo/vector-icons";
 
 import DeliciousFood from "./Pages/DeliciousFood";
 import SignIn_Up from "./Pages/SignIn_Up";
@@ -19,13 +24,60 @@ function Tabs() {
   return (
     <Tab.Navigator
       screenOptions={{
-        tabBarStyle: { position: "absolute" },
+        tabBarStyle: {
+          height: 80,
+          paddingHorizontal: 35,
+          paddingBottom: 20,
+        },
+        tabBarActiveTintColor: "#D35400",
+        tabBarInactiveTintColor: "rgba(0, 0, 0, 0.5)",
       }}
     >
-      <Tab.Screen name="inicio" component={Home} />
-      <Tab.Screen name="MyList" component={MyList} />
-      <Tab.Screen name="Order" component={Order} />
-      <Tab.Screen name="Profile" component={Profile} />
+      <Tab.Screen
+        name="Inicio"
+        component={Home}
+        options={{
+          tabBarIcon: ({ size, color }) => (
+            <FontAwesome5 name="store" size={size} color={color} />
+          ),
+          headerShown: false,
+        }}
+      />
+      <Tab.Screen
+        name="Order"
+        component={Order}
+        options={{
+          tabBarIcon: ({ size, color }) => (
+            <MaterialCommunityIcons
+              name="clipboard-list"
+              size={size}
+              color={color}
+            />
+          ),
+          headerShown: false,
+        }}
+      />
+      <Tab.Screen
+        name="MyList"
+        component={MyList}
+        options={{
+          tabBarIcon: ({ size, color }) => (
+            <Ionicons name="ios-bookmark" size={size} color={color} />
+          ),
+          headerShown: false,
+        }}
+      />
+
+      <Tab.Screen
+        name="Profile"
+        component={Profile}
+        options={{
+          tabBarIcon: ({ size, color }) => (
+            <FontAwesome name="user" size={size} color={color} />
+          ),
+          headerShown: false,
+        }}
+      />
     </Tab.Navigator>
   );
 }

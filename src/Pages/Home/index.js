@@ -204,6 +204,9 @@ export default function Home() {
               <View style={{ marginLeft: 6 }}>
                 <Text>3 min - 1.1 km</Text>
               </View>
+              <View>
+                <Image source={require("")} />
+              </View>
             </View>
           </View>
         </View>
