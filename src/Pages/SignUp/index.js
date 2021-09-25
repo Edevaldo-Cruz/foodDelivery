@@ -8,6 +8,7 @@ import {
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
+import { styles } from "./styles";
 import SingInBtn from "../../component/SingInBtn";
 import BackBtn from "../../component/BackBtn";
 import InputPassword from "../../component/InputPassword";
@@ -39,34 +40,3 @@ export default function SignUp() {
     </>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  containerText: {
-    alignSelf: "flex-start",
-    paddingLeft: 30,
-  },
-  title: {
-    fontFamily: "Bangers_400Regular",
-    fontStyle: "italic",
-    fontSize: 24,
-    color: "#000",
-    marginBottom: 30,
-  },
-  input: {
-    backgroundColor: "#CCC",
-    width: 354,
-    height: 50,
-    borderRadius: 30,
-    justifyContent: "center",
-    marginBottom: 20,
-    paddingLeft: 25,
-  },
-  text: {
-    alignSelf: "flex-end",
-  },
-});

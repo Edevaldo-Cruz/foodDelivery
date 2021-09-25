@@ -2,7 +2,6 @@ import React from "react";
 import {
   View,
   TextInput,
-  StyleSheet,
   Text,
   ScrollView,
   TouchableOpacity,
@@ -10,6 +9,7 @@ import {
 } from "react-native";
 import { AntDesign, Entypo, Ionicons } from "@expo/vector-icons";
 
+import { styles } from "./styles";
 import Menu from "../../component/Menu";
 import ItensMenu from "../../component/ItensMenu";
 
@@ -202,11 +202,11 @@ export default function Home() {
             <View style={styles.text}>
               <Ionicons name="time-outline" size={14} color="black" />
               <View style={{ marginLeft: 6 }}>
-                <Text>3 min - 1.1 km</Text>
+                <Text>20 min - 5.1 km</Text>
               </View>
-              <View>
-                <Image source={require("")} />
-              </View>
+            </View>
+            <View style={{ marginTop: 8 }}>
+              <Image source={require("../../assets/star5.png")} />
             </View>
           </View>
         </View>
@@ -227,8 +227,11 @@ export default function Home() {
             <View style={styles.text}>
               <Ionicons name="time-outline" size={14} color="black" />
               <View style={{ marginLeft: 6 }}>
-                <Text>3 min - 1.1 km</Text>
+                <Text>15 min - 4 km</Text>
               </View>
+            </View>
+            <View style={{ marginTop: 8 }}>
+              <Image source={require("../../assets/star3.png")} />
             </View>
           </View>
         </View>
@@ -249,8 +252,11 @@ export default function Home() {
             <View style={styles.text}>
               <Ionicons name="time-outline" size={14} color="black" />
               <View style={{ marginLeft: 6 }}>
-                <Text>3 min - 1.1 km</Text>
+                <Text>10 min - 3.5 km</Text>
               </View>
+            </View>
+            <View style={{ marginTop: 8 }}>
+              <Image source={require("../../assets/star4.png")} />
             </View>
           </View>
         </View>
@@ -258,52 +264,3 @@ export default function Home() {
     </>
   );
 }
-
-const styles = StyleSheet.create({
-  searchContainer: {
-    marginTop: "15%",
-    alignItems: "center",
-  },
-  AntDesign: {
-    padding: 20,
-  },
-  input: {
-    flexDirection: "row",
-    alignItems: "center",
-    backgroundColor: "#CCC",
-    width: 354,
-    height: 50,
-    borderRadius: 30,
-  },
-  location: {
-    paddingTop: "2%",
-    paddingLeft: 30,
-    flexDirection: "row",
-  },
-  containerMenu: {
-    padding: "2%",
-  },
-  title: {
-    flex: 1,
-    flexDirection: "row",
-  },
-  containerList: {
-    flex: 1,
-    flexDirection: "row",
-  },
-  nearMe: {
-    flex: 1,
-    flexDirection: "row",
-    alignItems: "stretch",
-    marginBottom: "2%",
-  },
-  textNear: {
-    margin: 10,
-    marginLeft: 15,
-  },
-  text: {
-    flexDirection: "row",
-    alignItems: "center",
-    marginTop: "2%",
-  },
-});

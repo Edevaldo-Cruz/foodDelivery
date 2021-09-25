@@ -44,7 +44,7 @@ function Tabs() {
         }}
       />
       <Tab.Screen
-        name="Order"
+        name="Pedido"
         component={Order}
         options={{
           tabBarIcon: ({ size, color }) => (
@@ -54,7 +54,6 @@ function Tabs() {
               color={color}
             />
           ),
-          headerShown: false,
         }}
       />
       <Tab.Screen

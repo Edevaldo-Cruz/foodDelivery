@@ -1,11 +1,11 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
-import { View, StyleSheet, Text } from "react-native";
+import { View, Text } from "react-native";
 import AppIntroSlider from "react-native-app-intro-slider";
 import { useNavigation } from "@react-navigation/native";
 
 import renderSlides from "../../component/renderSlides";
-
+import { styles } from "./styles";
 import SignIn_Up from "../SignIn_Up";
 
 const slides = [
@@ -35,7 +35,7 @@ const slides = [
   },
 ];
 
-function DeliciousFood() {
+export default function DeliciousFood() {
   const navigation = useNavigation();
   const [showHome, setShowHome] = useState(false);
 
@@ -68,22 +68,3 @@ function DeliciousFood() {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingHorizontal: "2%",
-    backgroundColor: "#D35400",
-  },
-  activeDot: {
-    backgroundColor: "#FFF",
-    width: 20,
-  },
-  text: {
-    fontFamily: "Bangers_400Regular",
-    fontSize: 22,
-    color: "#FFF",
-  },
-});
-
-export default DeliciousFood;

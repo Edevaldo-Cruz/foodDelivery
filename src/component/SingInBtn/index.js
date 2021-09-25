@@ -1,5 +1,7 @@
 import React from "react";
-import { TouchableOpacity, Text, StyleSheet } from "react-native";
+import { TouchableOpacity, Text } from "react-native";
+
+import { styles } from "./styles";
 
 export default function SingInBtn(props) {
   return (
@@ -8,21 +10,3 @@ export default function SingInBtn(props) {
     </TouchableOpacity>
   );
 }
-
-const styles = StyleSheet.create({
-  entrarbtn: {
-    backgroundColor: "#D35400",
-    width: 354,
-    height: 50,
-    borderRadius: 30,
-    justifyContent: "center",
-    marginBottom: 20,
-  },
-  entrar: {
-    fontFamily: "Bangers_400Regular",
-    fontStyle: "italic",
-    fontSize: 18,
-    color: "#FFF",
-    textAlign: "center",
-  },
-});

@@ -1,5 +1,6 @@
 import React from "react";
-import { TextInput, StyleSheet } from "react-native";
+import { TextInput } from "react-native";
+import { styles } from "./styles";
 
 export default function InputPassword(props) {
   return (
@@ -10,15 +11,3 @@ export default function InputPassword(props) {
     />
   );
 }
-
-const styles = StyleSheet.create({
-  input: {
-    backgroundColor: "#CCC",
-    width: 354,
-    height: 50,
-    borderRadius: 30,
-    justifyContent: "center",
-    marginBottom: 20,
-    paddingLeft: 25,
-  },
-});

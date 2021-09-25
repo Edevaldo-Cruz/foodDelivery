@@ -1,5 +1,7 @@
 import React from "react";
-import { View, Image, Text, StyleSheet } from "react-native";
+import { View, Image, Text } from "react-native";
+
+import { styles } from "./styles";
 
 export default function Menu(props) {
   return (
@@ -22,15 +24,3 @@ export default function Menu(props) {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    paddingLeft: 30,
-    paddingTop: 8,
-    paddingBottom: 2,
-  },
-  containerImg: {
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});

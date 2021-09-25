@@ -1,14 +1,8 @@
 import React from "react";
-import {
-  Text,
-  View,
-  Image,
-  StyleSheet,
-  Touchable,
-  TouchableOpacity,
-} from "react-native";
+import { Text, View, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
+import { styles } from "./styles";
 import SingInBtn from "../../component/SingInBtn";
 import GreyBtn from "../../component/GreyBtn";
 import Footer from "../../component/Footer";
@@ -35,16 +29,3 @@ export default function SignIn_Up() {
     </>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  image: {
-    width: 270,
-    height: 270,
-    marginBottom: 40,
-  },
-});
