@@ -1,18 +1,10 @@
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
-  containerFood: {
-    marginLeft: 30,
-    marginTop: 15,
-    width: 130,
-    height: 130,
-  },
   containerText: {
-    width: 120,
-    height: 120,
-    borderRadius: 30,
+    width: 150,
+    height: 150,
   },
-  menuBtn: {},
   text: {
     color: "#FFF",
     fontSize: 18,

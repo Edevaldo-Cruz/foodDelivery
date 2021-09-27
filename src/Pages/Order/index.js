@@ -1,21 +1,20 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { ScrollView, Text, View } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
-import BackBtn from "../../component/BackBtn";
+import BtnReturn from "../../component/BtnReturn";
+import ReviewOrder from "../../component/ReviewOrder";
 
 export default function Order() {
+  const navigation = useNavigation();
   return (
-    <View style={styles.containerTitle}>
-      <BackBtn onClick={() => navigation.navigate("Home")} />
-      <Text>Ultimos Pedidos</Text>
-    </View>
+    <ScrollView>
+      <View>
+        <BtnReturn onClick={() => navigation.navigate("Home")}>
+          <Text>Ultimos Pedidos</Text>
+        </BtnReturn>
+      </View>
+      <ReviewOrder />
+    </ScrollView>
   );
 }
-
-const styles = StyleSheet.create({
-  containerTitle: {
-    flex: 1,
-    flexDirection: "row",
-    alignItems: "center",
-  },
-});

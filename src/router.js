@@ -54,6 +54,7 @@ function Tabs() {
               color={color}
             />
           ),
+          headerShown: false,
         }}
       />
       <Tab.Screen
