@@ -15,6 +15,10 @@ export default function Order() {
         </BtnReturn>
       </View>
       <ReviewOrder />
+      <ReviewOrder />
+      <ReviewOrder />
+      <ReviewOrder />
+      <ReviewOrder />
     </ScrollView>
   );
 }

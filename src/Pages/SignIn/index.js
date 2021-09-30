@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   View,
   Text,
@@ -14,7 +14,22 @@ import Footer from "../../component/Footer";
 import InputPassword from "../../component/InputPassword";
 
 export default function SignIn() {
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
+
   const navigation = useNavigation();
+
+  function loginFirebase() {
+    firebase
+      .auth()
+      .createUserWithEmailAndPassword(email, senha)
+      .catch(function (error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+      });
+  }
+
   return (
     <>
       <BackBtn onClick={() => navigation.navigate("SignIn_Up")} />
@@ -24,9 +39,23 @@ export default function SignIn() {
           <Text style={styles.title}>Login</Text>
         </View>
         <View>
-          <TextInput style={styles.input} placeholder="Nome Do Usuario" />
-          <InputPassword placeholder="Senha" />
-          <SingInBtn onClick={() => navigation.navigate("Home")}>
+          <TextInput
+            style={styles.input}
+            placeholder="Nome Do Usuario"
+            onChangeText={(email) => setEmail(email)}
+            value={email}
+          />
+          <InputPassword
+            placeholder="Senha"
+            onChangeText={(senha) => setSenha(senha)}
+            value={senha}
+          />
+
+          <SingInBtn
+            onClick={() => {
+              loginFirebase();
+            }}
+          >
             <Text>Entrar</Text>
           </SingInBtn>
 
