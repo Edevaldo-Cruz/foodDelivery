@@ -12,6 +12,9 @@ import SingInBtn from "../../component/SingInBtn";
 import BackBtn from "../../component/BackBtn";
 import Footer from "../../component/Footer";
 import InputPassword from "../../component/InputPassword";
+import { styles } from "./styles";
+
+// import firebase from "../../config/firebase";
 
 export default function SignIn() {
   const [email, setEmail] = useState("");
@@ -19,7 +22,7 @@ export default function SignIn() {
 
   const navigation = useNavigation();
 
-  function loginFirebase() {
+  /*function loginFirebase() {
     firebase
       .auth()
       .createUserWithEmailAndPassword(email, senha)
@@ -27,8 +30,7 @@ export default function SignIn() {
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
-      });
-  }
+      })*/
 
   return (
     <>
@@ -53,7 +55,8 @@ export default function SignIn() {
 
           <SingInBtn
             onClick={() => {
-              loginFirebase();
+              // loginFirebase("Home");
+              navigation.navigate("Home");
             }}
           >
             <Text>Entrar</Text>
@@ -68,40 +71,3 @@ export default function SignIn() {
     </>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-
-  containerText: {
-    alignSelf: "flex-start",
-
-    paddingLeft: 30,
-  },
-  title: {
-    fontFamily: "Bangers_400Regular",
-    fontStyle: "italic",
-    fontSize: 24,
-    color: "#000",
-    marginBottom: 30,
-  },
-  entrar: {
-    textAlign: "center",
-    justifyContent: "center",
-  },
-  input: {
-    backgroundColor: "#CCC",
-    width: 354,
-    height: 50,
-    borderRadius: 30,
-    justifyContent: "center",
-    marginBottom: 20,
-    paddingLeft: 25,
-  },
-  text: {
-    alignSelf: "flex-end",
-  },
-});

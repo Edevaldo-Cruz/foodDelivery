@@ -1,6 +1,8 @@
 import React from "react";
-import { View, Image, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { View, Image, Text, TouchableOpacity } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
+
+import { styles } from "./styles";
 
 export default function ReviewOrder() {
   return (
@@ -33,51 +35,3 @@ export default function ReviewOrder() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  containerImg: {
-    flex: 1,
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    alignContent: "center",
-    marginLeft: 30,
-    marginTop: 85,
-  },
-  title: {
-    fontSize: 14,
-    fontWeight: "bold",
-  },
-  containerText: {
-    flexDirection: "row",
-    alignItems: "center",
-    marginVertical: 8,
-  },
-  text: {
-    fontSize: 14,
-    color: "#2ECC71",
-    fontWeight: "500",
-  },
-  containerLike: {
-    flexDirection: "row",
-    marginRight: 30,
-  },
-  deslike: {
-    marginRight: 10,
-    backgroundColor: "#CCC",
-    width: 25,
-    height: 25,
-    borderRadius: 50,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  like: {
-    marginRight: 10,
-    backgroundColor: "#CCC",
-    width: 25,
-    height: 25,
-    borderRadius: 50,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
