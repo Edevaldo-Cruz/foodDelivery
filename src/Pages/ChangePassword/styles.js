@@ -4,10 +4,11 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     marginTop: "15%",
-    marginHorizontal: 30,
+    alignItems: "center",
   },
-
-  list: {
-    marginTop: "2%",
+  text: {
+    fontSize: 14,
+    fontWeight: "500",
+    marginBottom: 20,
   },
 });

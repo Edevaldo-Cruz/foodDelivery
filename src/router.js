@@ -16,6 +16,7 @@ import Home from "./Pages/Home";
 import Order from "./Pages/Order";
 import MyList from "./Pages/MyList";
 import Profile from "./Pages/Profile";
+import ChangePassword from "./Pages/ChangePassword";
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -108,6 +109,11 @@ function Routes() {
       <Stack.Screen
         name="Home"
         component={Tabs}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="ChangePassword"
+        component={ChangePassword}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
