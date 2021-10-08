@@ -22,8 +22,8 @@ export default function Profile() {
         <MyProfile onClick={() => navigation.navigate("ChangePassword")}>
           <Text>Mudar Senha</Text>
         </MyProfile>
-        <MyProfile>
-          <Text>Dados de Pagamento</Text>
+        <MyProfile onClick={() => navigation.navigate("Payment")}>
+          <Text>Forma de Pagamento</Text>
         </MyProfile>
         <MyProfile>
           <Text>Meus Cupons</Text>

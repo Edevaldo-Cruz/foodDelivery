@@ -17,6 +17,7 @@ import Order from "./Pages/Order";
 import MyList from "./Pages/MyList";
 import Profile from "./Pages/Profile";
 import ChangePassword from "./Pages/ChangePassword";
+import Payment from "./Pages/Payment";
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -114,6 +115,11 @@ function Routes() {
       <Stack.Screen
         name="ChangePassword"
         component={ChangePassword}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Payment"
+        component={Payment}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
