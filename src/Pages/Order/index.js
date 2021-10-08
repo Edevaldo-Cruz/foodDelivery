@@ -11,7 +11,7 @@ export default function Order() {
   return (
     <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
       <View>
-        <BtnReturn onClick={() => navigation.navigate("Home")}>
+        <BtnReturn onClick={() => navigation.navigate("Inicio")}>
           <Text>Ultimos Pedidos</Text>
         </BtnReturn>
       </View>

@@ -45,7 +45,7 @@ function Tabs() {
         }}
       />
       <Tab.Screen
-        name="Pedido"
+        name="Pedidos"
         component={Order}
         options={{
           tabBarIcon: ({ size, color }) => (
@@ -59,7 +59,7 @@ function Tabs() {
         }}
       />
       <Tab.Screen
-        name="MyList"
+        name="Minha Lista"
         component={MyList}
         options={{
           tabBarIcon: ({ size, color }) => (
@@ -70,7 +70,7 @@ function Tabs() {
       />
 
       <Tab.Screen
-        name="Profile"
+        name="Perfil"
         component={Profile}
         options={{
           tabBarIcon: ({ size, color }) => (

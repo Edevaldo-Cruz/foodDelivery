@@ -2,16 +2,17 @@ import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
   btnReturn: {
-    flex: 1,
     flexDirection: "row",
+    justifyContent: "space-evenly",
+    marginBottom: 25,
   },
   btnContainer: {
-    flex: 1,
-    alignContent: "flex-start",
+    justifyContent: "flex-start",
+    flexGrow: 1,
   },
   textContainer: {
-    flex: 3,
     alignContent: "center",
+    flexGrow: 1,
   },
   text: {
     fontSize: 18,

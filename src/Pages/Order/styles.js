@@ -8,6 +8,6 @@ export const styles = StyleSheet.create({
   },
 
   list: {
-    marginTop: "2%",
+    marginBottom: "15%",
   },
 });
