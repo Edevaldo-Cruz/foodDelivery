@@ -36,15 +36,7 @@ export const styles = StyleSheet.create({
   text2: {
     paddingRight: 10,
   },
-  credit: {
-    marginHorizontal: 5,
-  },
-  plus: {
-    justifyContent: "center",
+  btn: {
     alignItems: "center",
-    width: 30,
-    height: 30,
-    backgroundColor: "#CCC",
-    borderRadius: 5,
   },
 });

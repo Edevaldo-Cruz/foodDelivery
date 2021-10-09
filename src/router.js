@@ -18,6 +18,10 @@ import MyList from "./Pages/MyList";
 import Profile from "./Pages/Profile";
 import ChangePassword from "./Pages/ChangePassword";
 import Payment from "./Pages/Payment";
+import RemovePaypal from "./Pages/RemovePaypal";
+import RemoveCredit from "./Pages/RemoveCredit";
+import AddCreditCard from "./Pages/AddCreditCard";
+import MyVoucher from "./Pages/MyVoucher";
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -120,6 +124,26 @@ function Routes() {
       <Stack.Screen
         name="Payment"
         component={Payment}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="RemovePaypal"
+        component={RemovePaypal}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="RemoveCredit"
+        component={RemoveCredit}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="AddCreditCard"
+        component={AddCreditCard}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="MyVoucher"
+        component={MyVoucher}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

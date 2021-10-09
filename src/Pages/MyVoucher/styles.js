@@ -15,36 +15,42 @@ export const styles = StyleSheet.create({
     marginBottom: 20,
     alignItems: "center",
   },
-  image: {
-    justifyContent: "center",
-    alignItems: "center",
-    width: 30,
-    height: 30,
+
+  voucher: {
     backgroundColor: "#CCC",
-    borderRadius: 5,
-  },
-  rowText: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    flexGrow: 2,
-    alignItems: "center",
-  },
-  text1: {
-    paddingLeft: 10,
+    width: 80,
+    height: 80,
+    borderRadius: 20,
   },
 
-  text2: {
-    paddingRight: 10,
+  text: {
+    fontWeight: "bold",
   },
-  credit: {
-    marginHorizontal: 5,
-  },
-  plus: {
-    justifyContent: "center",
+  dateRow: {
+    flexDirection: "row",
     alignItems: "center",
+    marginVertical: 8,
+  },
+  warning: {
+    color: "red",
+  },
+  check: {
+    backgroundColor: "#D35400",
     width: 30,
     height: 30,
+    borderRadius: 30,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  disabled: {
     backgroundColor: "#CCC",
-    borderRadius: 5,
+    width: 30,
+    height: 30,
+    borderRadius: 30,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  btn: {
+    alignItems: "center",
   },
 });

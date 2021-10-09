@@ -25,7 +25,7 @@ export default function Profile() {
         <MyProfile onClick={() => navigation.navigate("Payment")}>
           <Text>Forma de Pagamento</Text>
         </MyProfile>
-        <MyProfile>
+        <MyProfile onClick={() => navigation.navigate("MyVoucher")}>
           <Text>Meus Cupons</Text>
         </MyProfile>
         <MyProfile>
