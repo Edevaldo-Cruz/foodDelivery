@@ -31,7 +31,7 @@ export default function RemoveCredit() {
       </View>
       <View style={styles.btn}>
         <SingInBtn>
-          <Text>Defini como pagamento padrão</Text>
+          <Text>Definir como pagamento padrão</Text>
         </SingInBtn>
         <GreyBtn>
           <Text>Remover</Text>

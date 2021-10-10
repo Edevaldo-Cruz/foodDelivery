@@ -17,7 +17,7 @@ export default function Profile() {
       </View>
       <View style={styles.links}>
         <MyProfile>
-          <Text>Meu Perfil</Text>
+          <Text style={styles.disabled}>Meu Perfil</Text>
         </MyProfile>
         <MyProfile onClick={() => navigation.navigate("ChangePassword")}>
           <Text>Mudar Senha</Text>
@@ -29,16 +29,16 @@ export default function Profile() {
           <Text>Meus Cupons</Text>
         </MyProfile>
         <MyProfile>
-          <Text>Notificação</Text>
+          <Text style={styles.disabled}>Notificação</Text>
         </MyProfile>
         <MyProfile>
-          <Text>Sobre Nos</Text>
+          <Text style={styles.disabled}>Sobre Nos</Text>
         </MyProfile>
         <MyProfile>
-          <Text>Contatos</Text>
+          <Text style={styles.disabled}>Contatos</Text>
         </MyProfile>
       </View>
-      <GreyBtn>
+      <GreyBtn onClick={() => navigation.navigate("SignIn_Up")}>
         <Text>Sair</Text>
       </GreyBtn>
     </View>

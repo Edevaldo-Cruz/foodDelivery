@@ -15,6 +15,9 @@ export const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "bold",
   },
+  disabled: {
+    color: "#999",
+  },
   number: {
     fontSize: 14,
     marginBottom: 30,
