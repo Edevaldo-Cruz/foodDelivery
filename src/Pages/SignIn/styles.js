@@ -35,4 +35,32 @@ export const styles = StyleSheet.create({
   text: {
     alignSelf: "flex-end",
   },
+  disabled: {
+    backgroundColor: "#CCC",
+    width: 354,
+    height: 50,
+    borderRadius: 30,
+    justifyContent: "center",
+    marginBottom: 20,
+  },
+
+  entrarbtn: {
+    backgroundColor: "#D35400",
+    width: 354,
+    height: 50,
+    borderRadius: 30,
+    justifyContent: "center",
+    marginBottom: 20,
+  },
+  contentAlert: {
+    marginTop: 20,
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  warningAlert: {
+    paddingLeft: 10,
+    color: "#FF6347",
+    fontSize: 16,
+  },
 });

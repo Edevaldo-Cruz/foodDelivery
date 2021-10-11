@@ -2,14 +2,14 @@ import firebase from "firebase";
 import "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyD6kskfVj77bo3lYYArQssLNrstaQDovBg",
-  authDomain: "fooddelivery-43798.firebaseapp.com",
-  projectId: "fooddelivery-43798",
-  storageBucket: "fooddelivery-43798.appspot.com",
-  messagingSenderId: "537785048119",
-  appId: "1:537785048119:web:c2e8e81e1230aea173b3b2",
+  apiKey: "AIzaSyC9lBym0R-NXx9DAuTOrZQZfZpxsh4Eg18",
+  authDomain: "food-ed753.firebaseapp.com",
+  projectId: "food-ed753",
+  storageBucket: "food-ed753.appspot.com",
+  messagingSenderId: "393124503623",
+  appId: "1:393124503623:web:e5d7162118e6d686b65162",
 };
 
+// Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-
 export default firebase;
