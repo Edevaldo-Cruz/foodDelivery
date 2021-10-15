@@ -27,6 +27,29 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    
+      "expo": {
+        "ios": {
+          
+          "bundleIdentifier": "example.expo.googlesignin",
+          "config": {
+            "googleSignIn": {
+              
+              "reservedClientId": "<YOUR_REVERSED_IOS_CLIENT_ID>"
+            }
+          },
+          
+          "googleServicesFile": "./GoogleService-Info.plist"
+        },
+        "android": {
+         
+          "package": "example.expo.googlesignin",
+          
+          "googleServicesFile": "./google-services.json"
+        }
+      }
     }
+    
   }
-}
+

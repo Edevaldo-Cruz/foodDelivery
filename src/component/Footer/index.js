@@ -1,6 +1,9 @@
 import React from "react";
 import { View, Text, Image, TouchableOpacity } from "react-native";
 
+import { loginFacebook } from "../../config/facebook";
+import actionLoginGoogle from "../../config/google";
+
 import { styles } from "./styles";
 
 export default function Footer() {
@@ -18,14 +21,14 @@ export default function Footer() {
           style={styles.imageFooter}
           resizeMode="cover"
         />
-        <TouchableOpacity>
+        <TouchableOpacity onPress={loginFacebook}>
           <Image
             source={require("../../assets/facebook.png")}
             style={styles.imageSocialFacebook}
             resizeMode="cover"
           />
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={actionLoginGoogle}>
           <Image
             source={require("../../assets/google-plus.png")}
             style={styles.imageSocialGoogle}

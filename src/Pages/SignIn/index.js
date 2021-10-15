@@ -21,6 +21,7 @@ export default function SignIn() {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [errorLogin, setErrorLogin] = useState("");
+  var provider = new firebase.auth.GoogleAuthProvider();
 
   const loginFirebase = () => {
     firebase
@@ -36,6 +37,27 @@ export default function SignIn() {
         let errorMessage = error.message;
       });
   };
+
+  /*const googleFirebase = () => {
+    firebase
+      .auth()
+      .signInWithPopup(provider)
+      .then((result) => {
+         @type {firebase.auth.OAuthCredential} 
+        var credential = result.credential;
+        var token = credential.accessToken;
+        var user = result.user;
+        navigation.navigate("Home", { idUser: user.uid });
+      })
+
+      .catch((error) => {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        var email = error.email;
+        var credential = error.credential;
+        setErrorLogin(true);
+      });
+  }; */
 
   useEffect(() => {}, []);
 
