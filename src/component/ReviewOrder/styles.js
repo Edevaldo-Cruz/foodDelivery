@@ -27,22 +27,22 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     marginRight: 30,
   },
-  deslike: {
+  disable: {
+    justifyContent: "center",
+    alignItems: "center",
     marginRight: 10,
     backgroundColor: "#CCC",
     width: 25,
     height: 25,
     borderRadius: 50,
-    alignItems: "center",
-    justifyContent: "center",
   },
-  like: {
+  active: {
+    justifyContent: "center",
+    alignItems: "center",
     marginRight: 10,
-    backgroundColor: "#CCC",
+    backgroundColor: "#D35400",
     width: 25,
     height: 25,
     borderRadius: 50,
-    alignItems: "center",
-    justifyContent: "center",
   },
 });

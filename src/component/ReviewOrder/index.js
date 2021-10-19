@@ -1,26 +1,19 @@
-import React from "react";
-import { View, Image, Text, TouchableOpacity } from "react-native";
+import React, { useState } from "react";
+import { View, Image, Text } from "react-native";
+
 import { AntDesign } from "@expo/vector-icons";
 
+import Like from "../Like";
+import Dislike from "../Dislike";
+
 import { styles } from "./styles";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 export default function ReviewOrder() {
-  var likeActive = (
-    <AntDesign
-      name="like2"
-      size={18}
-      color="White"
-      style={{ backgroundColor: "#D35400" }}
-    />
-  );
-  var likeDisable = (
-    <AntDesign
-      name="like2"
-      size={18}
-      color="black"
-      style={{ backgroundColor: "#CCC" }}
-    />
-  );
+  const [count, setCount] = useState(0);
+  const like = () => setCount((prevCount) => prevCount + 1);
+  const [count2, setCount2] = useState(0);
+  const dislike = () => setCount2((prevCount) => prevCount + 1);
 
   return (
     <View style={styles.containerImg}>
@@ -33,20 +26,19 @@ export default function ReviewOrder() {
 
         <View style={styles.containerText}>
           <AntDesign name="like2" size={18} color="black" />
-          <Text> 999+ </Text>
+          <Text> {count} </Text>
           <Text> | </Text>
           <AntDesign name="dislike2" size={18} color="black" />
-          <Text> 93+</Text>
+          <Text> {count2}</Text>
         </View>
         <Text style={styles.text}>$99.99</Text>
       </View>
-
-      <View style={styles.containerLike}>
-        <TouchableOpacity style={styles.deslike}>{likeActive}</TouchableOpacity>
-        <TouchableOpacity style={styles.like}>
-          <AntDesign name="like2" size={18} color="black" />
-        </TouchableOpacity>
-      </View>
+      <TouchableOpacity onPress={like}>
+        <Like />
+      </TouchableOpacity>
+      <TouchableOpacity onPress={dislike}>
+        <Dislike />
+      </TouchableOpacity>
     </View>
   );
 }
